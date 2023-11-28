@@ -1,0 +1,19 @@
+#include <stdio.h>
+int find_lcm(int a, int b, int i) {
+    if (i % a == 0 && i % b == 0) {
+        return i;
+    } else {
+        return find_lcm(a, b, i + 1);
+    }
+}
+
+int main() {
+    int num1, num2;
+printf("Enter two numbers: ")
+
+    scanf("%d %d", &num1, &num2);
+
+    printf("LCM of %d and %d is %d\n", num1, num2, find_lcm(num1, num2, (num1 > num2) ? num1 : num2));
+
+    return 0;
+}
