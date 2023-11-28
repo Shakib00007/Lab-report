@@ -1,0 +1,19 @@
+#include<stdio.h>
+void swapByValue (int x,int y){
+     int temp = x;
+ x=y;
+  y= temp;
+  }
+swapByReference(int*x,int*y){int temp= *x; *x=*y;
+*y=temp;
+}
+int main(){
+       int num1=6 ;
+int num2=15;
+  printf("Original numbers:num1=%d,num2=%d\n",num1,num2);
+swapByValue(num1,num2);
+     printf("After callByValue:num1=%d,num2=%d\n",num1,num2);
+swapByReference(&num1,&num2);
+ printf("After callByReference:num1=%d,num2=%d\n",num1,num2);
+ return 0;
+} 
